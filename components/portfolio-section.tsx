@@ -26,7 +26,7 @@ export function PortfolioSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        {["all", "web", "app"].map((category) => (
+        {["all", "web app", "landing page"].map((category) => (
           <motion.button
             key={category}
             onClick={() => setFilter(category)}

@@ -44,15 +44,24 @@ export   const projects = [
       demoLink: "https://example.com/demo5",
       githubLink: "https://github.com/atharva00721/citimar",
     },
-    // {
-    //   id: 6,
-    //   title: "iOS Application",
-    //   category: "app",
-    //   image: "/placeholder.svg?height=300&width=400",
-    //   description: "iOS app for task management and productivity.",
-    //   demoLink: "https://example.com/demo6",
-    //   githubLink: "https://github.com/example/project6",
-    // },
+    {
+      id: 7,
+      title: "Devhacks",
+      category: "landing page",
+      image: "/dh.png",
+      description: "landing page of devhack hackathon.",
+      demoLink: "https://devhacks.vercel.app",
+      githubLink: "https://github.com/example/project6",
+    },
+    {
+      id: 8,
+      title: "echelon dev society-",
+      category: "landing page",
+      image: "/eds.png",
+      description: "landing page designed for echelon dev society.",
+      demoLink: "echelon-dev.vercel.app",
+      githubLink: "https://github.com/example/project6",
+    },
   ]
 
   export   const technologies = [
