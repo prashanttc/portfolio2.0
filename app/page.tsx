@@ -4,9 +4,11 @@ import { useState, useEffect } from "react"
 import { Sidebar } from "@/components/sidebar"
 import { MainContent } from "@/components/main-content"
 import { motion } from "framer-motion"
+import { BottomNavigation } from "@/components/BottomNavigation"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
+  const [activeSection, setActiveSection] = useState("about")
 
   useEffect(() => {
     // Simulate loading
@@ -44,7 +46,8 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <MainContent />
+          <MainContent Section={activeSection}/>
+          <BottomNavigation setActiveSection={setActiveSection} activeSection={activeSection}/>
         </motion.div>
       </div>
     </main>

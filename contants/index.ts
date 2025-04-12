@@ -156,3 +156,10 @@ export   const projects = [
       level: "Beginner",
     },
   ]
+  export const navItems = [
+    { id: "about", label: "About" },
+    { id: "resume", label: "Resume" },
+    { id: "portfolio", label: "Portfolio" },
+    { id: "tech-stack", label: "Tech Stack" },
+    { id: "contact", label: "Contact" },
+  ]

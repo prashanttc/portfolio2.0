@@ -9,11 +9,11 @@ import { TechStackSection } from "@/components/tech-stack-section"
 import { ContactSection } from "@/components/contact-section"
 import { AnimatePresence, motion } from "framer-motion"
 
-export function MainContent() {
-  const [activeSection, setActiveSection] = useState("about")
+export function MainContent({Section}:{Section:string}) {
+  const [activeSection, setActiveSection] = useState("")
 
   const renderSection = () => {
-    switch (activeSection) {
+    switch (activeSection || Section) {
       case "about":
         return <AboutSection />
       case "resume":
@@ -30,7 +30,7 @@ export function MainContent() {
   }
 
   return (
-    <div className="bg-[#1e1e1e]/80 backdrop-blur-sm rounded-2xl p-8">
+    <div className=" bg-[#1e1e1e]/80 backdrop-blur-sm rounded-2xl p-8">
       <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
 
       <AnimatePresence mode="wait">
