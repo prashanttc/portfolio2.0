@@ -64,54 +64,8 @@ export function ContactSection() {
         <div className="w-12 h-1 bg-accent mb-6"></div>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          <h3 className="text-xl font-heading font-semibold mb-4">Get in Touch</h3>
-
-          <div className="space-y-6">
-            <motion.div
-              className="flex items-start"
-              whileHover={{ x: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="w-10 h-10 bg-[#2a2a2a] rounded-lg flex items-center justify-center mr-4 mt-1">
-                <MapPin className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <h4 className="font-medium mb-1">Address</h4>
-                <p className="text-gray-400 text-sm">108 A dwarkapuri ,indore india</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="flex items-start"
-              whileHover={{ x: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="w-10 h-10 bg-[#2a2a2a] rounded-lg flex items-center justify-center mr-4 mt-1">
-                <Mail className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <h4 className="font-medium mb-1">Email</h4>
-                <p className="text-gray-400 text-sm">contact.prashant31@gmail.com</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="flex items-start"
-              whileHover={{ x: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="w-10 h-10 bg-[#2a2a2a] rounded-lg flex items-center justify-center mr-4 mt-1">
-                <Phone className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <h4 className="font-medium mb-1">Phone</h4>
-                <p className="text-gray-400 text-sm">+91 8602267729</p>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
+      <div className="gap-8">
+        
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
           <h3 className="text-xl font-heading font-semibold mb-4">Contact Form</h3>

@@ -73,20 +73,9 @@ export function Sidebar() {
           </div>
           <div>
             <p className="text-xs text-gray-400">EMAIL</p>
-            <p className="text-sm">contac.prashant31@gmail.com</p>
+            <p className="text-sm">contact.prashant31@gmail.com</p>
           </div>
         </motion.div>
-
-        <motion.div className="flex items-center" whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-          <div className="w-10 h-10 bg-[#2a2a2a] rounded-lg flex items-center justify-center mr-4">
-            <Phone className="w-5 h-5 text-accent" />
-          </div>
-          <div>
-            <p className="text-xs text-gray-400">PHONE</p>
-            <p className="text-sm">+91 8602267729</p>
-          </div>
-        </motion.div>
-
         <motion.div className="flex items-center" whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
           <div className="w-10 h-10 bg-[#2a2a2a] rounded-lg flex items-center justify-center mr-4">
             <Calendar className="w-5 h-5 text-accent" />
