@@ -8,6 +8,9 @@ import {
   Github,
   Linkedin,
   Twitter,
+  ArrowBigUpDash,
+  ArrowUpLeft,
+  ArrowUpRight,
 } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -113,7 +116,8 @@ export function Sidebar() {
           </motion.div>
         ))}
       </div>
-
+<div className="space-y-5">
+  
       <motion.button
         className="w-full bg-gradient-to-r from-accent to-accent/80 text-black font-medium py-3 px-4 rounded-xl flex items-center justify-center hover:from-accent/90 hover:to-accent/70 transition-all text-sm"
         whileHover={{ scale: 1.02, y: -2 }}
@@ -122,11 +126,25 @@ export function Sidebar() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
       >
-        <a href="path/to/your/file.pdf" download className="flex">
+        <a href="/web developer resume.pdf" download className="flex">
           <Download className="w-4 h-4 mr-2" />
           Download Resume
         </a>
       </motion.button>
+      <motion.button
+        className="w-full text-accent font-medium py-3 px-4 rounded-xl flex items-center justify-center hover:from-accent/90 hover:to-accent/70 transition-all text-sm"
+        whileHover={{ scale: 1.02, y: -2 }}
+        whileTap={{ scale: 0.98 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8 }}
+      >
+        <a href="https://resumate-io.vercel.app/preview/prashant-resume" target="_blank"  className="flex">
+          <ArrowUpRight className="w-4 h-4 mr-2" />
+          Live Resume
+        </a>
+      </motion.button>
+</div>
     </motion.div>
   );
 }
