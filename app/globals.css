@@ -60,9 +60,9 @@ body {
 }
 
 /* Smooth scrolling */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 /* Selection color */
 ::selection {
