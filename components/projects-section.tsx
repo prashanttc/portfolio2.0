@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ExternalLink, Github, ArrowRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { projects } from "@/data/projects"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { projects } from "@/data/projects";
+import { useRouter } from "next/navigation";
 
 export function ProjectsSection() {
-  const [filter, setFilter] = useState("all")
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null)
+  const [filter, setFilter] = useState("all");
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
-  const categories = [
-    "all",
-    "Web Application",
-    "landing page",
-  ]
+  const categories = ["all", "Web Application", "landing page"];
 
-  const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) => project.category === filter);
 
   const container = {
     hidden: { opacity: 0 },
@@ -27,22 +27,30 @@ export function ProjectsSection() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const item = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0 },
-  }
-
+  };
+  const router = useRouter();
+  const handleclick = (id:number) => {
+router.push(`/project/${id}`)
+  };
   return (
     <div>
-      <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h1 className="text-3xl lg:text-4xl font-heading font-semibold mb-3">
           Featured <span className="text-accent">Projects</span>
         </h1>
         <div className="w-16 h-0.5 bg-accent mb-6" />
         <p className="text-sm lg:text-base text-gray-300 mb-8">
-          Explore my latest work and creative solutions across various domains and technologies.
+          Explore my latest work and creative solutions across various domains
+          and technologies.
         </p>
       </motion.div>
 
@@ -81,6 +89,7 @@ export function ProjectsSection() {
           {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
+onClick={()=>handleclick(project.id)}
               className="group relative bg-[#222222]/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-transparent hover:border-accent/20 transition-all"
               variants={item}
               whileHover={{ y: -8 }}
@@ -92,7 +101,7 @@ export function ProjectsSection() {
                   src={project.images[0] || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-contain transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
@@ -153,18 +162,27 @@ export function ProjectsSection() {
                   </span>
                 </div>
 
-                <h3 className="text-lg font-medium mb-2 group-hover:text-accent transition-colors">{project.title}</h3>
+                <h3 className="text-lg font-medium mb-2 group-hover:text-accent transition-colors">
+                  {project.title}
+                </h3>
 
-                <p className="text-gray-400 text-xs leading-relaxed mb-3">{project.description}</p>
+                <p className="text-gray-400 text-xs leading-relaxed mb-3">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-1.5">
                   {project.technologies.slice(0, 3).map((tech) => (
-                    <span key={tech} className="text-xs bg-[#2a2a2a] text-gray-300 px-2 py-0.5 rounded-full">
+                    <span
+                      key={tech}
+                      className="text-xs bg-[#2a2a2a] text-gray-300 px-2 py-0.5 rounded-full"
+                    >
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="text-xs text-gray-500">+{project.technologies.length - 3} more</span>
+                    <span className="text-xs text-gray-500">
+                      +{project.technologies.length - 3} more
+                    </span>
                   )}
                 </div>
               </div>
@@ -173,5 +191,5 @@ export function ProjectsSection() {
         </motion.div>
       </AnimatePresence>
     </div>
-  )
+  );
 }

@@ -33,7 +33,7 @@ export const projects = [
       "Mobile-friendly and fast UI",
     ],
     demoLink: "https://resumate-io.vercel.app",
-    githubLink: "https://github.com/prashanttc/resume-io",
+    githubLink: "https://github.com/prashanttc/resume.io",
     duration: "2 months",
     role: "Full Stack Developer",
   },
