@@ -14,7 +14,7 @@ export const projects = [
       "/re4.png",
       "/re5.png",
       "/re6.png",
-        ],
+    ],
     technologies: [
       "Next.js",
       "Tailwind CSS",
@@ -86,17 +86,15 @@ export const projects = [
       "A platform that allows whistleblowers to submit issues securely and anonymously.",
     fullDescription:
       "This secure platform allows users to report unethical behavior or concerns without revealing their identity. It uses encryption, anonymous session IDs, and metadata scrubbing to ensure complete privacy. Built with FastAPI and MongoDB, the system supports real-time updates, message replies, and internal case tracking. Ideal for NGOs, HR teams, or activist groups needing privacy-first issue reporting.",
-    images: ["/ae1.png","/ae2.png","/ae23.png","/ae24.png","/ae25.png","/ae26.png"],
-    technologies: [
-      "React",
-      "Python",
-      "FastAPI",
-      "OpenAI API",
-      "WebSocket",
-      "MongoDB",
-      "Docker",
-      "Kubernetes",
+    images: [
+      "/ae1.png",
+      "/ae2.png",
+      "/ae23.png",
+      "/ae24.png",
+      "/ae25.png",
+      "/ae26.png",
     ],
+    technologies: ["React", "nextjs", "Google Gemini api", "supabase"],
     features: [
       "Fully anonymous submission form",
       "Real-time response & case updates",
